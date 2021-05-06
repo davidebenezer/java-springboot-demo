@@ -1,0 +1,20 @@
+server:
+  port: 9000
+
+# enabling native config server - local
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+#spring:
+#  profiles:
+#    active: native
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/davidebenezer/spring-config-server
+          search-paths: '*service'
